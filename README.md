@@ -8,5 +8,5 @@ The plan is to find some time to evenly split between projects.
 We'll see how it goes!
 
 Projects in order:
-* [Placeholder](https://github.com/ihuettel/100Days/tree/master/README.md): This just redirects to the ReadMe for now
+* [Placeholder](https://github.com/ihuettel/100Days-UIKit/blob/main/README.md): This just redirects to the ReadMe for now
 * More to come...
