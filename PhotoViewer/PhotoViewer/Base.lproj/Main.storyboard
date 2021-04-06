@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <scene sceneID="tMN-51-fdo">
             <objects>
                 <tableViewController id="9cg-2l-29R" customClass="ViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZFl-FK-4lz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZFl-FK-4lz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,6 +54,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrU-HU-bLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-242.0289855072464" y="48.883928571428569"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Pca-2b-yzV">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="DWL-wg-GQ2" customClass="DetailViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xeh-3a-WBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jfC-WF-BOg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WlU-yb-Zfr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jfC-WF-BOg" firstAttribute="centerY" secondItem="Xeh-3a-WBQ" secondAttribute="centerY" id="bHl-bq-rDl"/>
+                            <constraint firstItem="jfC-WF-BOg" firstAttribute="top" secondItem="Xeh-3a-WBQ" secondAttribute="topMargin" constant="-44" id="cek-UD-4PL"/>
+                            <constraint firstItem="jfC-WF-BOg" firstAttribute="centerX" secondItem="Xeh-3a-WBQ" secondAttribute="centerX" id="jag-8A-JTS"/>
+                            <constraint firstItem="jfC-WF-BOg" firstAttribute="leading" secondItem="WlU-yb-Zfr" secondAttribute="leading" id="xqp-NI-6gh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayImage" destination="jfC-WF-BOg" id="RJC-AL-QLD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vgd-QF-5yB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1394.2028985507247" y="48.883928571428569"/>
         </scene>
     </scenes>
     <resources>

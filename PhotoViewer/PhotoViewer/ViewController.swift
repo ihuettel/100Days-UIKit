@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  PhotoViewer
 //
-//  Created by homebase on 4/2/21.
+//  Created by Ian Huettel on 4/2/21.
 //
 
 import UIKit
@@ -34,7 +34,13 @@ class ViewController: UITableViewController {
         return cell
     }
     
-
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            vc.imageName = pictures[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
+    
 }
 

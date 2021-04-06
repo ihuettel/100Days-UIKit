@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PhotoViewer
 //
-//  Created by homebase on 4/2/21.
+//  Created by Ian Huettel on 4/2/21.
 //
 
 import UIKit
