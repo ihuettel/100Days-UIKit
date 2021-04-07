@@ -14,13 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     
     var countries = ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+    var score = 0
+    var correctAnswer = Int()
     
     func askQuestion() {
         
         countries.shuffle()
-        
-        let correctAnswer = Int.random(in: 0...2)
-        title = countries[correctAnswer].uppercased()
+        correctAnswer = Int.random(in: 0...2)
+        title = countries[correctAnswer].uppercased() + " | Score: \(score)"
         
         let buttons = [button1!, button2!, button3!]
         
@@ -28,6 +29,16 @@ class ViewController: UIViewController {
             button.setImage(UIImage(named: countries[i]), for: .normal)
         }
         
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        if sender.tag == correctAnswer {
+            score += 1
+            title = "Correct!"
+        } else {
+            title = "Try again.."
+        }
+        askQuestion()
     }
     
     override func viewDidLoad() {
