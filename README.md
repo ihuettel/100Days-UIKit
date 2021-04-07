@@ -9,4 +9,5 @@ We'll see how it goes!
 
 Projects in order:
 * [PhotoViewer](https://github.com/ihuettel/100Days-UIKit/tree/main/PhotoViewer): A basic app for viewing photos from the National Severe Storms Laboratory
+* [GuessTheFlag](https://github.com/ihuettel/100Days-UIKit/tree/main/GuessTheFlag): A simple flag guessing game for different countries of the world
 * More to come...
